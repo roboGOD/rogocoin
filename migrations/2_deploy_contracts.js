@@ -1,5 +1,5 @@
-const TodoList = artifacts.require("./TodoList.sol");
+const RogoCoin = artifacts.require("./RogoCoin.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(TodoList);
+  deployer.deploy(RogoCoin);
 };
