@@ -1,0 +1,864 @@
+{
+  "contractName": "RogoCoinSale",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract RogoCoin",
+          "name": "_tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenPrice",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenContract",
+      "outputs": [
+        {
+          "internalType": "contract RogoCoin",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract RogoCoin\",\"name\":\"_tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenPrice\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"internalType\":\"contract RogoCoin\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/RogoCoinSale.sol\":\"RogoCoinSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/RogoCoin.sol\":{\"keccak256\":\"0xf0812d2a3aceac4e23a4698bb7c3c39a795c1f227ad1b040e69ae79ff7d0620a\",\"urls\":[\"bzz-raw://eb8509b5a999782a949e1a06a6dc47c3299fa00ef7f4cc13c6f3384169156362\",\"dweb:/ipfs/QmaC2uPhkDM9rbnDg1Wpesu25YyTQp6eXrw1MqF5cN5ojv\"]},\"project:/contracts/RogoCoinSale.sol\":{\"keccak256\":\"0x496ee19d0f78525db758f09eca292c81aa570beb3cf9548196fce4bb3cdd2665\",\"urls\":[\"bzz-raw://b0bc9830e3a5345c8ebbb7b035159febbf08a905b17b707308caa5a32c4d3c40\",\"dweb:/ipfs/QmY863N9a5n3mgvcFdeNWxetKWb6qbxHXV4Pvpt5ZDHdBH\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516101373803806101378339818101604052604081101561003357600080fd5b508051602090910151600080546001600160a01b03199081163317909155600180546001600160a01b03909416939091169290921790915560025560bb8061007c6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806355a373d61460375780637ff9b596146059575b600080fd5b603d6071565b604080516001600160a01b039092168252519081900360200190f35b605f6080565b60408051918252519081900360200190f35b6001546001600160a01b031681565b6002548156fea265627a7a723158203f99516114b711bcc8ff18180af0b5b7cc7fee23bcc06738090c7559ef47961164736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806355a373d61460375780637ff9b596146059575b600080fd5b603d6071565b604080516001600160a01b039092168252519081900360200190f35b605f6080565b60408051918252519081900360200190f35b6001546001600160a01b031681565b6002548156fea265627a7a723158203f99516114b711bcc8ff18180af0b5b7cc7fee23bcc06738090c7559ef47961164736f6c63430005100032",
+  "sourceMap": "51:268:1:-;;;157:160;8:9:-1;5:2;;;30:1;27;20:12;5:2;157:160:1;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;157:160:1;;;;;;;228:5;:18;;-1:-1:-1;;;;;;228:18:1;;;236:10;228:18;;;;;252:30;;-1:-1:-1;;;;;252:30:1;;;;;;;;;;;;;;288:10;:24;51:268;;;;;;",
+  "deployedSourceMap": "51:268:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;51:268:1;;;;;;;;;;;;;;;;;;;;;;;;94:29;;;:::i;:::-;;;;-1:-1:-1;;;;;94:29:1;;;;;;;;;;;;;;127:25;;;:::i;:::-;;;;;;;;;;;;;;;;94:29;;;-1:-1:-1;;;;;94:29:1;;:::o;127:25::-;;;;:::o",
+  "source": "pragma solidity ^0.5.16;\nimport \"./RogoCoin.sol\";\n\ncontract RogoCoinSale {\n  address admin;\n  RogoCoin public tokenContract;\n  uint256 public tokenPrice;\n\n  constructor(RogoCoin _tokenContract, uint256 _tokenPrice) public {\n    admin = msg.sender;\n    tokenContract = _tokenContract;\n    tokenPrice = _tokenPrice;\n  }\n}\n",
+  "sourcePath": "/home/robogod/Code/blockchain/rogocoin/contracts/RogoCoinSale.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/RogoCoinSale.sol",
+    "exportedSymbols": {
+      "RogoCoinSale": [
+        254
+      ]
+    },
+    "id": 255,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 225,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "project:/contracts/RogoCoin.sol",
+        "file": "./RogoCoin.sol",
+        "id": 226,
+        "nodeType": "ImportDirective",
+        "scope": 255,
+        "sourceUnit": 224,
+        "src": "25:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 254,
+        "linearizedBaseContracts": [
+          254
+        ],
+        "name": "RogoCoinSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 228,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 254,
+            "src": "77:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 227,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "77:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 230,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 254,
+            "src": "94:29:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_RogoCoin_$223",
+              "typeString": "contract RogoCoin"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 229,
+              "name": "RogoCoin",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 223,
+              "src": "94:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RogoCoin_$223",
+                "typeString": "contract RogoCoin"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 232,
+            "name": "tokenPrice",
+            "nodeType": "VariableDeclaration",
+            "scope": 254,
+            "src": "127:25:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 231,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "127:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 252,
+              "nodeType": "Block",
+              "src": "222:95:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 242,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 239,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 228,
+                      "src": "228:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 240,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 269,
+                        "src": "236:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 241,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "236:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "228:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 243,
+                  "nodeType": "ExpressionStatement",
+                  "src": "228:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 246,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 244,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 230,
+                      "src": "252:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RogoCoin_$223",
+                        "typeString": "contract RogoCoin"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 245,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 234,
+                      "src": "268:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RogoCoin_$223",
+                        "typeString": "contract RogoCoin"
+                      }
+                    },
+                    "src": "252:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_RogoCoin_$223",
+                      "typeString": "contract RogoCoin"
+                    }
+                  },
+                  "id": 247,
+                  "nodeType": "ExpressionStatement",
+                  "src": "252:30:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 250,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 248,
+                      "name": "tokenPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 232,
+                      "src": "288:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 249,
+                      "name": "_tokenPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 236,
+                      "src": "301:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "288:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 251,
+                  "nodeType": "ExpressionStatement",
+                  "src": "288:24:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 253,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 237,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 234,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 253,
+                  "src": "169:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_RogoCoin_$223",
+                    "typeString": "contract RogoCoin"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 233,
+                    "name": "RogoCoin",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 223,
+                    "src": "169:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_RogoCoin_$223",
+                      "typeString": "contract RogoCoin"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 236,
+                  "name": "_tokenPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 253,
+                  "src": "194:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 235,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "168:46:1"
+            },
+            "returnParameters": {
+              "id": 238,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "222:0:1"
+            },
+            "scope": 254,
+            "src": "157:160:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 255,
+        "src": "51:268:1"
+      }
+    ],
+    "src": "0:320:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/RogoCoinSale.sol",
+      "exportedSymbols": {
+        "RogoCoinSale": [
+          254
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 225,
+        "name": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 224,
+          "absolutePath": "project:/contracts/RogoCoin.sol",
+          "file": "./RogoCoin.sol",
+          "scope": 255,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 226,
+        "name": "ImportDirective",
+        "src": "25:24:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            254
+          ],
+          "name": "RogoCoinSale",
+          "scope": 255
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "admin",
+              "scope": 254,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 227,
+                "name": "ElementaryTypeName",
+                "src": "77:7:1"
+              }
+            ],
+            "id": 228,
+            "name": "VariableDeclaration",
+            "src": "77:13:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "tokenContract",
+              "scope": 254,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract RogoCoin",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "RogoCoin",
+                  "referencedDeclaration": 223,
+                  "type": "contract RogoCoin"
+                },
+                "id": 229,
+                "name": "UserDefinedTypeName",
+                "src": "94:8:1"
+              }
+            ],
+            "id": 230,
+            "name": "VariableDeclaration",
+            "src": "94:29:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "tokenPrice",
+              "scope": 254,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 231,
+                "name": "ElementaryTypeName",
+                "src": "127:7:1"
+              }
+            ],
+            "id": 232,
+            "name": "VariableDeclaration",
+            "src": "127:25:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 254,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_tokenContract",
+                      "scope": 253,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract RogoCoin",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "RogoCoin",
+                          "referencedDeclaration": 223,
+                          "type": "contract RogoCoin"
+                        },
+                        "id": 233,
+                        "name": "UserDefinedTypeName",
+                        "src": "169:8:1"
+                      }
+                    ],
+                    "id": 234,
+                    "name": "VariableDeclaration",
+                    "src": "169:23:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_tokenPrice",
+                      "scope": 253,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 235,
+                        "name": "ElementaryTypeName",
+                        "src": "194:7:1"
+                      }
+                    ],
+                    "id": 236,
+                    "name": "VariableDeclaration",
+                    "src": "194:19:1"
+                  }
+                ],
+                "id": 237,
+                "name": "ParameterList",
+                "src": "168:46:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 238,
+                "name": "ParameterList",
+                "src": "222:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 228,
+                              "type": "address",
+                              "value": "admin"
+                            },
+                            "id": 239,
+                            "name": "Identifier",
+                            "src": "228:5:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 269,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 240,
+                                "name": "Identifier",
+                                "src": "236:3:1"
+                              }
+                            ],
+                            "id": 241,
+                            "name": "MemberAccess",
+                            "src": "236:10:1"
+                          }
+                        ],
+                        "id": 242,
+                        "name": "Assignment",
+                        "src": "228:18:1"
+                      }
+                    ],
+                    "id": 243,
+                    "name": "ExpressionStatement",
+                    "src": "228:18:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract RogoCoin"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 230,
+                              "type": "contract RogoCoin",
+                              "value": "tokenContract"
+                            },
+                            "id": 244,
+                            "name": "Identifier",
+                            "src": "252:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 234,
+                              "type": "contract RogoCoin",
+                              "value": "_tokenContract"
+                            },
+                            "id": 245,
+                            "name": "Identifier",
+                            "src": "268:14:1"
+                          }
+                        ],
+                        "id": 246,
+                        "name": "Assignment",
+                        "src": "252:30:1"
+                      }
+                    ],
+                    "id": 247,
+                    "name": "ExpressionStatement",
+                    "src": "252:30:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 232,
+                              "type": "uint256",
+                              "value": "tokenPrice"
+                            },
+                            "id": 248,
+                            "name": "Identifier",
+                            "src": "288:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 236,
+                              "type": "uint256",
+                              "value": "_tokenPrice"
+                            },
+                            "id": 249,
+                            "name": "Identifier",
+                            "src": "301:11:1"
+                          }
+                        ],
+                        "id": 250,
+                        "name": "Assignment",
+                        "src": "288:24:1"
+                      }
+                    ],
+                    "id": 251,
+                    "name": "ExpressionStatement",
+                    "src": "288:24:1"
+                  }
+                ],
+                "id": 252,
+                "name": "Block",
+                "src": "222:95:1"
+              }
+            ],
+            "id": 253,
+            "name": "FunctionDefinition",
+            "src": "157:160:1"
+          }
+        ],
+        "id": 254,
+        "name": "ContractDefinition",
+        "src": "51:268:1"
+      }
+    ],
+    "id": 255,
+    "name": "SourceUnit",
+    "src": "0:320:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T14:13:06.696Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

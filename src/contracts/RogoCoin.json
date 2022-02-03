@@ -6081,12 +6081,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xDbc0a4c33c784158271531f313D8eEA41297B640",
-      "transactionHash": "0xd29bcfaff1e6d70c2f43a5acb758f12471760b4c6e6e12b61edb64bfc85bc855"
+      "address": "0xd37eBE03068A14E96941EE37264A0499Ea7ca42F",
+      "transactionHash": "0xbd0ec8e12915f2dff5be89ab25894fd78c62ac6e6fd6abdd470191058cd1950c"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-02-03T05:04:57.091Z",
+  "updatedAt": "2022-02-03T05:06:23.714Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
